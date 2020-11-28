@@ -89,10 +89,7 @@ class SearchScreen extends Component {
           <View
             style={{
               height: hp('20%'),
-              // width: wp('100%'),
               backgroundColor: AppStyles.color.COLOR_GREY,
-              // marginHorizontal: 5,
-              // borderRadius: 2,
               marginBottom: 4,
               flexDirection: 'row',
               justifyContent: 'flex-start',
@@ -175,23 +172,10 @@ class SearchScreen extends Component {
                     color: AppStyles.color.COLOR_LIGHTWHITE,
 
                     paddingLeft: 10,
-                    // paddingVertical: 5,
-                    // width: wp('58%'),
                   }}
                   numberOfLines={1}>
                   {item.show.genres + '  '}
                 </Text>
-                {/* <Text
-                  style={{
-                    fontFamily: AppStyles.fonts.REGULAR,
-                    fontSize: 13,
-                    color: AppStyles.color.COLOR_PISTA,
-                    fontWeight: '900',
-                    paddingLeft: 10,
-                    // paddingVertical: 5,
-                  }}>
-                  {item.show.runtime + ' ' + 'Mins'}
-                </Text> */}
               </View>
               <View
                 style={{
@@ -220,8 +204,6 @@ class SearchScreen extends Component {
                     paddingLeft: 10,
                     paddingVertical: 5,
                   }}>
-                  {/* {item.show.rating.average + ' ' + 'IMDB'} */}
-
                   {item.show.runtime + ' ' + 'Mins'}
                 </Text>
               </View>
@@ -268,9 +250,7 @@ class SearchScreen extends Component {
     return (
       <SafeAreaView>
         <StatusBar barStyle="dark-content" />
-        {/* <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={{backgroundColor: Colors.lighter}}> */}
+
         <View
           style={{
             backgroundColor: AppStyles.color.COLOR_LIGHT_BLACK,
@@ -310,7 +290,6 @@ class SearchScreen extends Component {
                 fontSize: 16,
                 color: AppStyles.color.COLOR_BLACK,
                 fontFamily: AppStyles.fonts.REGULAR,
-                // backgroundColor: AppStyles.color.COLOR_PISTA,
               }}
               onChangeText={(username) => this.setState({searchVal: username})}
               value={this.state.searchVal}
@@ -355,8 +334,6 @@ class SearchScreen extends Component {
                 data={this.state.seriesData}
                 renderItem={this.renderItem}
                 keyExtractor={(item, index) => item + index}
-                //   onEndReached={this.handleLoadMore}
-                // onEndReachedThreshold={0.3}
                 // onRefresh={() => this.onRefresh()}
                 // refreshing={this.state.isFetching}
                 extraData={this.state.seriesData}
@@ -380,7 +357,6 @@ class SearchScreen extends Component {
             )}
           </View>
         </View>
-        {/* </ScrollView> */}
         {this.state.showLoader && <Loader />}
       </SafeAreaView>
     );

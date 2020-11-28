@@ -227,9 +227,7 @@ class EpisodeScreen extends Component {
     return (
       <SafeAreaView>
         <StatusBar barStyle="dark-content" />
-        {/* <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={{backgroundColor: Colors.lighter}}> */}
+
         <View
           style={{
             backgroundColor: AppStyles.color.COLOR_LIGHT_BLACK,
@@ -322,8 +320,6 @@ class EpisodeScreen extends Component {
               data={this.state.episodeData}
               renderItem={this.renderItem}
               keyExtractor={(item, index) => item + index}
-              //   onEndReached={this.handleLoadMore}
-              // onEndReachedThreshold={0.3}
               // onRefresh={() => this.onRefresh()}
               // refreshing={this.state.isFetching}
               extraData={this.state.episodeData}
@@ -338,7 +334,6 @@ class EpisodeScreen extends Component {
             />
           )}
         </View>
-        {/* </ScrollView> */}
       </SafeAreaView>
     );
   }
