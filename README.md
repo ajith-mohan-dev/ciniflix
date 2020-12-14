@@ -1,7 +1,27 @@
-# Run before launching in Simulator
+# APP_NAME
 
-- npm install
+## Notes
 
-## Clean Android Gradlew
+- Run before launching in iOS Simulator
 
-- cd android && ./gradlew clean
+```bash
+yarn install-pod || npm run install-pod
+```
+
+- Clean Pods
+
+```bash
+yarn clean-pos || npm run clean-pod
+```
+
+- Clean Android Gradlew
+
+```bash
+yarn clean-android || npm run clean-android
+```
+
+<!-- ## File Paths
+
+- ."env" [appName]
+- GoogleService-Info.plist [appName/ios/]
+- google-services.json [appName/android/app/] -->
